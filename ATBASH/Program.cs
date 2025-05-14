@@ -45,10 +45,11 @@ namespace ATBASH
             message = responseString;
             decodedMessage = message;
         }
+
         //סוכם את כמות ההתראות
-        static int pointCounter(string[] masamessage)
+        static int pointCounter(string[] message)
         {
-            int counter = masamessage.Length;
+            int counter = message.Length;
             return counter;
         }
         //שומר את כל הפעמים שמופיע אזהרה
