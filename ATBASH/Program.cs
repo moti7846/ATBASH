@@ -44,7 +44,6 @@ namespace ATBASH
 
 
 
-
         //static void printConsole()
         
         static void Main(string args)
