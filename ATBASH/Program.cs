@@ -76,12 +76,13 @@ namespace ATBASH
 
         
         static void Main()
-
         {
-            Console.WriteLine("");
-            deCoding(Console.ReadLine);
+            Console.WriteLine("enter your Message : ");
+            string input = Console.ReadLine();
+            deCoding(input);
             warning(decodedMessage);
             pointCounter(warningName);
+            printConsole();
         }
     }
 }
