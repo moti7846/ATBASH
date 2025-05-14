@@ -20,11 +20,11 @@ namespace ATBASH
             n = " ";
             decodedMessage = n;
         }
-
+        //סוכם את כמות ההתראות
         static int pointCounter(string[] masamessage)
         {
-
-            return 0;
+            int counter = masamessage.Length;
+            return counter;
         }
         //שומר את כל הפעמים שמופיע אזהרה
         static void warning(string input)
