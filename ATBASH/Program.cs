@@ -71,7 +71,30 @@ namespace ATBASH
         //פונקציית הדפסה
         static void printConsole()
         {
-          
+            int counter = pointCounter(warningName);
+            if (counter >= 1 || counter <= 5)
+            {
+                Console.WriteLine("----WARNING----");
+            }
+            else if(counter >= 6 || counter <= 10)
+            {
+                Console.WriteLine("----DANGER !!----");
+            }
+            else if(counter >= 11 || counter <= 15)
+            {
+                Console.WriteLine("----ULTRA ALERT !!----");
+            }
+            Console.Write("message: ");
+            Console.WriteLine(decodedMessage);
+            Console.Write("words: ");
+            foreach(string s in warningName)
+            {
+                Console.Write(s + ", ");
+            }
+            Console.WriteLine();
+            Console.Write("words: ");
+            Console.WriteLine(pointCounter(warningName));
+
         }
 
         
