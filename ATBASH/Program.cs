@@ -42,11 +42,13 @@ namespace ATBASH
             warningName = tempWarnings.ToArray();
         }
 
+        //פונקציית הדפסה
+        static void printConsole()
+        {
+
+        }
 
 
-
-        //static void printConsole()
-        
         static void Main(string args)
         {
             deCoding(args);
