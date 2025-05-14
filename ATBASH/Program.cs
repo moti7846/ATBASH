@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ATBASH
 {
@@ -42,20 +45,37 @@ namespace ATBASH
             message = responseString;
             decodedMessage = message;
         }
-
+        //סוכם את כמות ההתראות
         static int pointCounter(string[] masamessage)
         {
-
-            return 0;
+            int counter = masamessage.Length;
+            return counter;
         }
-
-        static string warning(string input)
+        //שומר את כל הפעמים שמופיע אזהרה
+        static void warning(string input)
         {
-            return "";
+            List<string> tempWarnings = new List<string> ();
+            string[] warnings = { "bomb", "nukhba", "fighter", "rocket", "secret" };
+            string[] temp = input.Split(' ');
+            foreach(string i in temp)
+            {
+                if (warnings.Contains(i))
+                {
+                    tempWarnings.Add(i);
+                }
+            }
+            warningName = tempWarnings.ToArray();
         }
-        //static void printConsole()
+
+        //פונקציית הדפסה
+        static void printConsole()
+        {
+          
+        }
+
         
         static void Main()
+
         {
             Console.WriteLine("");
             deCoding(Console.ReadLine);
