@@ -8,6 +8,10 @@ namespace ATBASH
 {
     internal class Program
     {
+        static void n()
+        {
+
+        }
         static void Main(string[] args)
         {
         }
