@@ -26,7 +26,7 @@ namespace ATBASH
 
             return 0;
         }
-
+        //שומר את כל הפעמים שמופיע אזהרה
         static void warning(string input)
         {
             List<string> tempWarnings = new List<string> ();
