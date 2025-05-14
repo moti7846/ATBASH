@@ -8,12 +8,33 @@ namespace ATBASH
 {
     internal class Program
     {
-        static void n()
+        static string[] warningName;
+        static string decodedMessage;
+        static int point;
+        static void deCoding(string input)
+        {
+            string n;
+            n = " ";
+            decodedMessage = n;
+        }
+
+        static int pointCounter(string[] masamessage)
         {
 
+            return 0;
         }
-        static void Main(string[] args)
+
+        static string warning(string input)
         {
+            return "";
+        }
+        //static void printConsole()
+        
+        static void Main(string args)
+        {
+            deCoding(args);
+            warning(decodedMessage);
+            pointCounter(warningName);
         }
     }
 }
