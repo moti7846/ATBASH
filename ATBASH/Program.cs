@@ -45,9 +45,8 @@ namespace ATBASH
         //פונקציית הדפסה
         static void printConsole()
         {
-
+          
         }
-
 
         static void Main(string args)
         {
