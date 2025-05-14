@@ -28,8 +28,13 @@ namespace ATBASH
         {
             return "";
         }
-        //static void printConsole()
-        
+        //פונקציית הדפסה
+        static void printConsole()
+        {
+
+        }
+
+
         static void Main(string args)
         {
             deCoding(args);
