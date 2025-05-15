@@ -70,6 +70,7 @@ namespace ATBASH
         //פונקציית הדפסה
         static void printConsole()
         {
+
             if (pointM >= 1 && pointM <= 5)
             {
                 Console.WriteLine("----WARNING----");
@@ -95,6 +96,8 @@ namespace ATBASH
             Console.WriteLine(pointM);
 
         }
+
+
 
 
         static void Main()
