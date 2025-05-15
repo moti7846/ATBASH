@@ -18,22 +18,22 @@ namespace ATBASH
         {
             string message;
             message = input.ToLower();
-            char[] data = { 'a', 'b', 'c' , 'd', 'e', 'f' , 'g', 'h', 
-                            'i' ,'j', 'k', 'l' , 'm', 'n', 'o' , 'p', 
+            char[] data = { 'a', 'b', 'c' , 'd', 'e', 'f' , 'g', 'h',
+                            'i' ,'j', 'k', 'l' , 'm', 'n', 'o' , 'p',
                             'q','r' ,'s', 't', 'u' , 'v', 'w', 'x' , 'y', 'z'};
-            
+
             char response = 'a';
             string responseString = "";
             foreach (char c in message)
             {
-                if (" /-.,![]()".Contains(c)) 
+                if (" /-.,![]()".Contains(c))
                 {
                     responseString += c;
-                    continue; 
+                    continue;
                 }
-                
+
                 int numberNow = ((int)c);
-                
+
                 if (numberNow < 123 && numberNow > 96)
                 {
                     int calc = 123 - numberNow;
@@ -46,23 +46,22 @@ namespace ATBASH
             decodedMessage = message;
         }
 
-        //סוכם את כמות ההתראות
-        static int pointCounter(string[] message)
-        {
-            int counter = message.Length;
-            return counter;
-        }
+
         //שומר את כל הפעמים שמופיע אזהרה
         static void warning(string input)
         {
-            List<string> tempWarnings = new List<string> ();
+            List<string> tempWarnings = new List<string>();
             string[] warnings = { "bomb", "nukhba", "fighter", "rocket", "secret" };
             string[] temp = input.Split(' ');
-            foreach(string i in temp)
+            foreach (string i in temp)
             {
                 if (warnings.Contains(i))
                 {
-                    tempWarnings.Add(i);
+                    if (!tempWarnings.Contains(i))
+                    {
+                        tempWarnings.Add(i);
+                    }
+                    pointM++;
                 }
             }
             warningName = tempWarnings.ToArray();
@@ -71,40 +70,40 @@ namespace ATBASH
         //פונקציית הדפסה
         static void printConsole()
         {
-            int counter = pointCounter(warningName);
-            if (counter >= 1 || counter <= 5)
+            if (pointM >= 1 && pointM <= 5)
             {
                 Console.WriteLine("----WARNING----");
             }
-            else if(counter >= 6 || counter <= 10)
+            else if (pointM >= 6 && pointM <= 10)
             {
                 Console.WriteLine("----DANGER !!----");
             }
-            else if(counter >= 11 || counter <= 15)
+            else if (pointM >= 11 && pointM <= 15)
             {
                 Console.WriteLine("----ULTRA ALERT !!----");
             }
             Console.Write("message: ");
             Console.WriteLine(decodedMessage);
             Console.Write("words: ");
-            foreach(string s in warningName)
+            string temp = "";
+            foreach (string s in warningName)
             {
                 Console.Write(s + ", ");
             }
             Console.WriteLine();
             Console.Write("words: ");
-            Console.WriteLine(pointCounter(warningName));
+            Console.WriteLine(pointM);
 
         }
 
-        
-        static void Main()
 
+        static void Main()
         {
-            Console.WriteLine("");
-            deCoding(Console.ReadLine);
+            Console.WriteLine("enter your Message : ");
+            string input = Console.ReadLine();
+            deCoding(input);
             warning(decodedMessage);
-            pointCounter(warningName);
+            printConsole();
         }
     }
 }
